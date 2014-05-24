@@ -1,4 +1,4 @@
-SCIP Book
+SICP Book
 =========
 
-Notes, code, and experiements from the SCIP book.
+Notes, code, and experiements from the SICP book.
