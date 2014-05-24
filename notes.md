@@ -57,3 +57,26 @@ Example:
 	; Returns 136
 	(f 5)
 	
+Terms:
+
+* _normal-order evaluation_: fully expand and then reduce 
+* _applicative-order evaluation_: evaluate the arguments and then apply
+
+Lisp uses applicative-order evaluation. More on normal-order evaluation in chapter 3.
+
+### Conditionals
+
+Format:
+
+    (cond (<p1> <e1>)
+    	  (<p2> <e2>)
+	  (<pn> <en))
+
+Each `(<pn> <en>)` is a _clause_ made up of a _predicate_ and a _consequent expression_. Example:
+
+    (define (abs x)
+    	    (cond ((> x 0) x)
+	    	  ((= x 0) 0)
+		  ((< x 0) (- x))))
+
+		  
