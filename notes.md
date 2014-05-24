@@ -28,9 +28,15 @@ Term: tree accumulation (TODO: what is that?)
 
 The evaluation rule doesn't handle definitions. (define x 3) isn't a combination. It's an exception called a "special form".
 
+### Compound Procedures
+
 Compound procedure form:
 
 	(define (<name> <formal parameters>) <body>)
+
+* <name> is a symbol associated with the procedure
+* <formal parameters> are names for the arguments
+* <body> yields the value
 
 Example:
 
@@ -39,7 +45,15 @@ Example:
 	; Returns 4
 	(square 2)
 
+	(define (sum-of-squares x y)
+		(+ (square x) (square y)))
 
-* <name> is a symbol associated with the procedure
-* <formal parameters> are names for the arguments
-* <body> yields the value
+	; Returns 25
+	(sum-of-squares 3 4)
+
+	(define (f a)
+		(sum-of-squares (+ a 1) (* a 2)))
+
+	; Returns 136
+	(f 5)
+	
