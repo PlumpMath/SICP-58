@@ -70,13 +70,13 @@ Format:
 
     (cond (<p1> <e1>)
     	  (<p2> <e2>)
-	  (<pn> <en))
+	  	  (<pn> <en))
 
 Each `(<pn> <en>)` is a _clause_ made up of a _predicate_ and a _consequent expression_. Example:
 
     (define (abs x)
     	    (cond ((> x 0) x)
-	    	  ((= x 0) 0)
-		  ((< x 0) (- x))))
+	    		  ((= x 0) 0)
+		     	  ((< x 0) (- x))))
 
 		  
