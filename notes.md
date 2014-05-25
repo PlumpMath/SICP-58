@@ -34,9 +34,9 @@ Compound procedure form:
 
 	(define (<name> <formal parameters>) <body>)
 
-* <name> is a symbol associated with the procedure
-* <formal parameters> are names for the arguments
-* <body> yields the value
+* `<name>` is a symbol associated with the procedure
+* `<formal parameters>` are names for the arguments
+* `<body>` yields the value
 
 Example:
 
