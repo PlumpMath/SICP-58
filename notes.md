@@ -79,4 +79,38 @@ Each `(<pn> <en>)` is a _clause_ made up of a _predicate_ and a _consequent expr
 	    		  ((= x 0) 0)
 		     	  ((< x 0) (- x))))
 
-		  
+Or:
+
+	(define (abs x)
+		(cond ((< x 0) (- x))
+			  (else x)))
+
+Or with `if`, which can only be used when there are two cases:
+
+	(if <predicate> <consequent> <alternative>)
+
+Example:
+
+	(define (abs x)
+		(if (< x 0)
+			(- x)
+			x))
+
+### Logical Composition Operators
+
+* `(and <e1> ... <en>)` -- evaluates e1 to en one at a time. If any are false it exits, otherwise returns the value of the last item.
+* `(or <e1> ... <en>)` -- evaluates from left to right and if it finds a true, it stops and returns that item.
+* `(not <e>)` -- evaluates as true when <e> is flase, otherwise false.
+
+`and` and `or` are special forms, not procedures, because the subexpressions are not necessarily all evaluated.
+
+JavaScript:
+
+	if ((x > 5) && (x < 10)) {
+		// Do something
+	}
+
+Scheme:
+
+	(and (> x 5) (> x 10))
+
