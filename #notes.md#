@@ -1,10 +1,6 @@
 SICP
 ====
 
-## Resources
-
-* [YouTube Videos](http://www.youtube.com/results?search_query=sicp)
-
 ## Chapter 1
 
 Define variables with `define`:
@@ -117,4 +113,6 @@ JavaScript:
 Scheme:
 
 	(and (> x 5) (< x 10))
+
+L
 
