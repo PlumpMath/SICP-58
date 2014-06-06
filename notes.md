@@ -13,8 +13,8 @@ SICP
 
 This section also includes notes from the [Functional Programming 1 video](http://youtu.be/zmYqShvVDh4).
 
-* An expression as data: `'(+ 2 3)'` ; returns "(+ 2 3)", not 5.
-* A "sentence" is a sequence of words: `'(this is some data)'`
+* An expression as data: `'(+ 2 3)` ; returns "(+ 2 3)", not 5.
+* A "sentence" is a sequence of words: `'(this is some data)`
 
 Some functions:
 
