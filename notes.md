@@ -5,9 +5,13 @@ SICP
 
 * [SICP in HTML Format](https://sarabander.github.io/sicp/)
 * [YouTube Videos](http://www.youtube.com/results?search_query=sicp)
-** [UC Berkeley Class Videos](http://youtu.be/zmYqShvVDh4)
+* [UC Berkeley Class Videos](http://youtu.be/zmYqShvVDh4)
 * [EdX 'Edge' Course](https://edge.edx.org/courses/UCBerkeleyX/CS61AS/2014_Spring/about)
 * [A Syllabus](http://www-inst.eecs.berkeley.edu/~cs61a/sp14/)
+
+See also:
+
+* [Simply Scheme](http://www.cs.berkeley.edu/~bh/ss-toc2.html)
 
 ## Chapter 1
 
