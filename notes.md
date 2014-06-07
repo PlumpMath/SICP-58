@@ -11,7 +11,12 @@ SICP
 
 See also:
 
+* [Quick summary of Scheme](http://classes.soe.ucsc.edu/cmps112/Spring03/languages/scheme/SchemeTutorialA.html)
 * [Simply Scheme](http://www.cs.berkeley.edu/~bh/ss-toc2.html)
+* [Cheatsheet](http://www.cefns.nau.edu/~edo/Classes/CS396_WWW/Misc_docs/Scheme%20Tutorial.html)
+* [Cheatsheet](http://www.cefns.nau.edu/~edo/Classes/CS396_WWW/Misc_docs/schemeCheatsheet.pdf) -- I built the Anki deck from this one
+* [Big reference at GNU.org](http://www.gnu.org/software/mit-scheme/documentation/mit-scheme-ref/)
+
 
 ## Chapter 1
 
