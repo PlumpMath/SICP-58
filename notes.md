@@ -107,10 +107,10 @@ Example:
 JavaScript:
 
 	if ((x > 5) && (x < 10)) {
-		// Do something
+	    // Do something
 	}
 
 Scheme:
 
-	(and (> x 5) (< x 10))
+	(and (> x 5) (< x 10) #t)
 
