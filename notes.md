@@ -1,7 +1,35 @@
 SICP
 ====
 
+## Resources
+
+* [SICP in HTML Format](https://sarabander.github.io/sicp/)
+* [YouTube Videos](http://www.youtube.com/results?search_query=sicp)
+* [UC Berkeley Class Videos](http://youtu.be/zmYqShvVDh4)
+* [EdX 'Edge' Course](https://edge.edx.org/courses/UCBerkeleyX/CS61AS/2014_Spring/about)
+* [A Syllabus](http://www-inst.eecs.berkeley.edu/~cs61a/sp14/)
+
+See also:
+
+* [Quick summary of Scheme](http://classes.soe.ucsc.edu/cmps112/Spring03/languages/scheme/SchemeTutorialA.html)
+* [Simply Scheme](http://www.cs.berkeley.edu/~bh/ss-toc2.html)
+* [Cheatsheet](http://www.cefns.nau.edu/~edo/Classes/CS396_WWW/Misc_docs/Scheme%20Tutorial.html)
+* [Cheatsheet](http://www.cefns.nau.edu/~edo/Classes/CS396_WWW/Misc_docs/schemeCheatsheet.pdf) -- I built the Anki deck from this one
+* [Big reference at GNU.org](http://www.gnu.org/software/mit-scheme/documentation/mit-scheme-ref/)
+
+
 ## Chapter 1
+
+This section also includes notes from the [Functional Programming 1 video](http://youtu.be/zmYqShvVDh4).
+
+* An expression as data: `'(+ 2 3)` ; returns "(+ 2 3)", not 5.
+* A "sentence" is a sequence of words: `'(this is some data)`
+
+Some functions:
+
+    (first '(here is a sentence)) ; returns "here"
+    
+    (last '(here is a sentence)) ; returns "sentence"
 
 Define variables with `define`:
 
