@@ -45,3 +45,7 @@ Berkeley teaches top down.
 ### `if` vs `cond`
 
 Use `if` if there are two items; `cond` for multiple items.
+
+### Special Forms
+
+`cond`, `if`, `define` are examples of "special forms". ("form" = "expression")
