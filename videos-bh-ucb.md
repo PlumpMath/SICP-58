@@ -28,3 +28,20 @@ These are the same _functions_ but different _procedures_:
 "Inside a computer there are only procedures."
 
 ## [Functional Programming 2](http://youtu.be/HFxGVf3KAto)
+
+Layers:
+
+* application program
+* high level language
+* low level language
+* machine language/architecture
+* circuit elements (gates)
+* transistors
+* solid-state physics
+* quantum mechanics
+
+Berkeley teaches top down.
+
+### `if` vs `cond`
+
+Use `if` if there are two items; `cond` for multiple items.
