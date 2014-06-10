@@ -17,13 +17,7 @@ See also:
 * [Cheatsheet](http://www.cefns.nau.edu/~edo/Classes/CS396_WWW/Misc_docs/schemeCheatsheet.pdf) -- I built the Anki deck from this one
 * [Big reference at GNU.org](http://www.gnu.org/software/mit-scheme/documentation/mit-scheme-ref/)
 
-
 ## Chapter 1
-
-This section also includes notes from the [Functional Programming 1 video](http://youtu.be/zmYqShvVDh4).
-
-* An expression as data: `'(+ 2 3)` ; returns "(+ 2 3)", not 5.
-* A "sentence" is a sequence of words: `'(this is some data)`
 
 Some functions:
 
