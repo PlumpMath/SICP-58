@@ -30,8 +30,8 @@
         ((and (< y x) (< y z)) '(x z))
         (else '(x y))))
 
-(define (sum-of-squares x y)
-  (+ (square x) (square y)))
+(define (sum-of-squares x y) ; Maybe change this to accept one arg -- a list
+  (+ (square x) (square y))) ; Maybe use a map function here?
 
 ; Run it with arguments: 1, 2, and 3
 (sum-of-squares (larger-two-of-three 1 2 3))
