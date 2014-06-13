@@ -40,8 +40,7 @@
 ; The function also works if you pass in a list of any size
 (sum-of-squares '(1 2 3 4 5))
 
-; TODO: figure out why something like this wouldn't work
-; Is lambda necessary?
+; TODO: figure out whether lambda is necessary
 ; (reduce + 0 (map (square) lst)))
 ;
 ; TODO: make a larger-x-of-list function that could return largest 2 or 10 of a list
