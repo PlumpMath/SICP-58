@@ -22,7 +22,7 @@
         (else (sum-of-squares x y))))
 
 ; -----------------------------------------------
-; Version 3 -- took a while and some research to get it to work.
+; Version 3 -- took some research to get it to work.
 
 ; Accept three numbers and return the larger two as a list
 (define (larger-two-of-three x y z)
@@ -32,7 +32,10 @@
 
 ; Take a list and sum the squares
 (define (sum-of-squares lst)
-  (reduce + 0 (map (lambda (x) (* x x)) lst)))
+  (reduce + 0 (map (lambda (x) (square x)) lst)))
+  ; TODO: figure out why something like this wouldn't work
+  ; Is lambda necessary?
+  ; (reduce + 0 (map (square) lst)))
 
 ; Run it with arguments: 1, 2, and 3
 (sum-of-squares (larger-two-of-three 1 2 3))
