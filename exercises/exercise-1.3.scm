@@ -22,20 +22,21 @@
         (else (sum-of-squares x y))))
 
 ; -----------------------------------------------
-; Version 3 doesn't work. See error message below.
+; Version 3 -- took a while and some research to get it to work.
 
-; Accept three numbers and return the larger two
+; Accept three numbers and return the larger two as a list
 (define (larger-two-of-three x y z)
-  (cond ((and (< x y) (< x z)) '(y z))
-        ((and (< y x) (< y z)) '(x z))
-        (else '(x y))))
+  (cond ((and (< x y) (< x z)) (list y z))
+        ((and (< y x) (< y z)) (list x z))
+        (else (list x y))))
 
-(define (sum-of-squares x y) ; Maybe change this to accept one arg -- a list
-  (+ (square x) (square y))) ; Maybe use a map function here?
+; Take a list and sum the squares
+(define (sum-of-squares lst)
+  (reduce + 0 (map (lambda (x) (* x x)) lst)))
 
 ; Run it with arguments: 1, 2, and 3
 (sum-of-squares (larger-two-of-three 1 2 3))
 
-; How do I get around this problem?
-;The procedure #[compound-procedure 11 sum-of-squares] has been called with 1 argument; it requires exactly 2 arguments.
+; The function also works if you pass in a list of any size
+(sum-of-squares '(1 2 3 4 5))
 
