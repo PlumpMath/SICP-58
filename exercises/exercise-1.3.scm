@@ -33,13 +33,16 @@
 ; Take a list and sum the squares
 (define (sum-of-squares lst)
   (reduce + 0 (map (lambda (x) (square x)) lst)))
-  ; TODO: figure out why something like this wouldn't work
-  ; Is lambda necessary?
-  ; (reduce + 0 (map (square) lst)))
 
 ; Run it with arguments: 1, 2, and 3
 (sum-of-squares (larger-two-of-three 1 2 3))
 
 ; The function also works if you pass in a list of any size
 (sum-of-squares '(1 2 3 4 5))
+
+; TODO: figure out why something like this wouldn't work
+; Is lambda necessary?
+; (reduce + 0 (map (square) lst)))
+;
+; TODO: make a larger-x-of-list function that could return largest 2 or 10 of a list
 
