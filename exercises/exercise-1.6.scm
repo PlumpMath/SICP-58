@@ -28,3 +28,4 @@
 ; http://community.schemewiki.org/?sicp-ex-1.6
 ; (new-if uses applicative-order evaluation rather than normal-order evaluation, causing endless recursion)
 
+; `if` evaluates the predicate right away, not like applicative-order evaluation

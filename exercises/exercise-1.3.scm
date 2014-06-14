@@ -49,4 +49,3 @@
 ; (reduce + 0 (map (square) lst)))
 ;
 ; TODO: make a larger-x-of-list function that could return largest 2 or 10 of a list
-
