@@ -8,18 +8,23 @@
 (define (sum-of-squares-largest-two-of-three x y z)
   (cond ((and (< x y) (< x z)) (+ (square y) (square z))) ; x < both
         ((and (< y x) (< y z)) (+ (square x) (square z))) ; y < both
-        (else (+ (square x) (square y)))))
+        (else (+ (square x) (square y))))) 
 
 ; -----------------------------------------------
 ; Version 2
 
 (define (sum-of-squares x y)
-  (+ (square x) (square y)))
+  (+ (square x) (square y))) 
 
 (define (sum-of-squares-largest-two-of-three x y z)
   (cond ((and (< x y) (< x z)) (sum-of-squares y z))
         ((and (< y x) (< y z)) (sum-of-squares x z))
-        (else (sum-of-squares x y))))
+        (else (sum-of-squares x y)))) 
+
+; From Donny's testing idea:
+(= (sum-of-squares-largest-two-of-three 1 2 3) (sum-of-squares 2 3)) ; #t
+(= (sum-of-squares-largest-two-of-three 9 45 292) (sum-of-squares 45 292)) ; #t
+(= (sum-of-squares-largest-two-of-three 95 43 32) (sum-of-squares 95 43)) ; #t
 
 ; -----------------------------------------------
 ; Version 3 -- took some research to get it to work.
