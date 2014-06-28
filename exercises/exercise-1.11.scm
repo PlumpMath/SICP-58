@@ -7,11 +7,11 @@
 ; Write a recursive version
 ; TODO: this is probably wrong, because it seems to return 3 for everything
 (define (f n)
-  (cond (< n 3) (n)
-        (>= n 3) (+
+  (cond ((< n 3) n)
+        (else (+
                    (f (- n 1))
                    (* 2 (f (- n 2)))
-                   (* 3 (f (- n 3))))))
-
+                   (* 3 (f (- n 3)))))))
 
 ; Write an iterative version
+
