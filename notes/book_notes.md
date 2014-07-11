@@ -136,3 +136,10 @@ Scheme:
 
 	(and (> x 5) (< x 10) #t)
 
+---
+
+### 1.2.3 Orders of Growth
+
+
+
+
