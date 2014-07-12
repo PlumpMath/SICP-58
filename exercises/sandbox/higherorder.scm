@@ -40,6 +40,6 @@
 
 ;; "With the aid of an identity procedure to compute the term, we can define `sum-integers` in term of `sum`."
 
-(define (identity x) x)
+(define (identity x) x) 
 (define (sum-integers a b)
   (sum identity a inc b))
