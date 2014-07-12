@@ -141,5 +141,20 @@ Scheme:
 ### 1.2.3 Orders of Growth
 
 
+### Higher Order Procedures
+
+### Constructing Procedures Using `Lambda`
+
+Example:
+
+    (lambda (X) (+ x 4))
+	
+This:
+
+    (define (a x) (+ x 4))
+
+is the same as this:
+
+    (define a (lambda (x) (+ x 4)))
 
 
