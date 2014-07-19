@@ -157,4 +157,8 @@ is the same as this:
 
     (define a (lambda (x) (+ x 4)))
 
+Another example:
+
+    ((lambda (x y z) (+ x y (square z))) 1 2 3)
+
 

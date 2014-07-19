@@ -30,6 +30,8 @@
       0
       (+ (term a)
 	 (sum term (next a) next b)))) 
+;; term is a function
+;; next is the function that gets to the next term, e.g., `inc` 
 
 (define (inc n) (+ n 1)) 
 (define (sum-cubes a b)
