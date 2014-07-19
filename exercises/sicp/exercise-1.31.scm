@@ -22,13 +22,18 @@
   (product identity 1 next n))
 
 ;;; See also:
+;; http://stackoverflow.com/questions/24038769/dont-understand-scheme-procedure-in-sicp
 
-;; ; The basic pattern
-;; (define (<name> a b)
+;; ; The basic pattern:
+;; (define (<name> <term> a <next> b)
 ;;   (if (> a b)
 ;;       0
 ;;       (+ (<term> a)
-;; 	 (<name> (<next> a) b))))
+;; 	 (<name> <term> (<next> a) <next> b))))
+;; <name> is the name of the procedure (e.g., "sum")
+;; <term> is the procedure that is applied to each item in the series. It can be called "term" or "identity" or whatever
+;; <next> is the incrementer
+;; Another example: (sum identity 1 add1 10)
 
 ; Becomes:
 (define (sum term a next b)
@@ -53,7 +58,6 @@
   (sum identity a inc b))
 
 ;;;; Another attempt
-;;;
 
 (define (product f a next b)
   (if (> a b)
