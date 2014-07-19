@@ -1,4 +1,4 @@
-;;;; Exercise 1.32 from SICP
+;;;; Exercise 1.31 from SICP
 
 ;;; I used the answers wiki to try to understand the proper way to do this
 
