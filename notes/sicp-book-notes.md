@@ -162,3 +162,38 @@ Another example:
     ((lambda (x y z) (+ x y (square z))) 1 2 3)
 
 
+See also: http://stackoverflow.com/questions/24038769/dont-understand-scheme-procedure-in-sicp
+
+    ; The basic pattern:
+    (define (<name> <term> a <next> b)
+      (if (> a b)
+          0
+          (+ (<term> a)
+         (<name> <term> (<next> a) <next> b))))
+
+* <name> is the name of the procedure (e.g., "sum")
+* <term> is the procedure that is applied to each item in the series. It can be called "term" or "identity" or whatever
+* <next> is the incrementer
+
+Another example: `(sum identity 1 add1 10)`
+
+Here's a working example:
+
+    (define (sum term a next b)
+      (if (> a b)
+          0
+          (+ (term a)
+         (sum term (next a) next b)))) 
+
+    ;; term is a function
+    ;; next is the function that gets to the next term, e.g., `inc` 
+
+    (define (cube a)
+      (* a a a)) 
+    (define (inc n) (+ n 1)) 
+    (define (sum-cubes a b)
+      (sum cube a inc b)) 
+
+For more details, see exercise-1.31.scm in the `exercises` directory.
+
+
