@@ -161,6 +161,11 @@ Another example:
 
     ((lambda (x y z) (+ x y (square z))) 1 2 3)
 
+### `let` for Local Variables
+
+
+
+### `(define (<name> <term> a <next> b) ...)`
 
 See also: http://stackoverflow.com/questions/24038769/dont-understand-scheme-procedure-in-sicp
 
