@@ -163,7 +163,36 @@ Another example:
 
 ### `let` for Local Variables
 
+The general form of `let` is:
 
+    (let ((<var 1> <exp 1>)
+          (<var 2> <exp 2>)
+          ...
+          (<var n> <exp n>))
+      <body>)
+
+In other words:
+
+    let <var 1> have the value <exp 1> and
+        <var 2> have the value <exp 2> and
+        ...
+        <var n> have the value <exp n>
+      in <body>
+
+"A let expression is simply syntactic sugar for the underlying lambda application" that looks like this:
+
+    ((lambda (<var 1> ... <var n>)
+        <body>)
+        <exp 1>
+        ...
+        <exp n>)
+
+Watch out for situations like this where the outer variable is used because it isn't in the <body> yet:
+
+    (define x 2)
+    (let ((x 3) ; This local variable gets used in the <body>
+          (y (+ x 2))) ; x is still 2 on this line, so y=4
+      (* x y)) ; 3*4=12
 
 ### `(define (<name> <term> a <next> b) ...)`
 
