@@ -238,10 +238,10 @@ Summarizing Chapter 1: the focus was on "building abstractions by combining proc
 
 ### Key ideas:
 
-* _closure_: the glue we use for combining data objects should allow us to combine not only primitive data objects, but compound data objects as well.
-* _conventional interfaces_: compound data objects can serve as conventional interfaces for combining program modules in mix-and-match ways
-* _symbolic expressions_: data whose elementary parts can be arbitrary symbols rather than only numbers... there are many ways in which a given data structure can be represented in terms of simpler objects, and the choice of representation can have significant impact on the time and space requirements of processes that manipulate the data.
-* _generic operations_: they handle many different types of data.
-* _data directed programming_: a technique that allows individual data representations to be designed in isolation and then combined _additively_ (i.e., without modification)
+* *closure*: the glue we use for combining data objects should allow us to combine not only primitive data objects, but compound data objects as well.
+* *conventional interfaces*: compound data objects can serve as conventional interfaces for combining program modules in mix-and-match ways
+* *symbolic expressions*: data whose elementary parts can be arbitrary symbols rather than only numbers... there are many ways in which a given data structure can be represented in terms of simpler objects, and the choice of representation can have significant impact on the time and space requirements of processes that manipulate the data.
+* *generic operations*: they handle many different types of data.
+* *data directed programming*: a technique that allows individual data representations to be designed in isolation and then combined _additively_ (i.e., without modification)
 
 
