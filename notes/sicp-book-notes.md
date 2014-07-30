@@ -265,3 +265,4 @@ Example:
     (car (car z)) ; 1
     (car (cdr z)) ; 3
 
+TODO: finish 2.1.2 to 2.2 and review chapter 1
