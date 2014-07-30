@@ -243,6 +243,7 @@ Summarizing Chapter 1: the focus was on "building abstractions by combining proc
 * **symbolic expressions**: data whose elementary parts can be arbitrary symbols rather than only numbers... there are many ways in which a given data structure can be represented in terms of simpler objects, and the choice of representation can have significant impact on the time and space requirements of processes that manipulate the data.
 * **generic operations**: they handle many different types of data.
 * **data directed programming**: a technique that allows individual data representations to be designed in isolation and then combined _additively_ (i.e., without modification)
+* **selectors** and **constructors**: the interface between the two parts of our system (in the `make-rat` exercise).
 
 ### Data Abstraction
 
