@@ -115,4 +115,28 @@ def pressure(v, t, n):
 
 Then you can get help with `help(pressure)`.
 
+## Default Argument Values
+
+Example:
+
+```python
+def pressure(v, t, n=6.022e23):
+    pass
+```
+
+# Purity
+
+```python
+# Pure
+def square(x):
+    return mul(x, x)
+
+# Not pure
+def print_square(x):
+    print(square(x))
+```
+
+
+
+
 
