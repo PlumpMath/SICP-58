@@ -1,0 +1,6 @@
+#lang racket
+(define (xmas-presents days)
+  (if (= days 0)
+      0
+      (xmas-presents (- days 1))))
+(xmas-presents 12)

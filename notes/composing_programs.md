@@ -3,7 +3,7 @@ Composing Programs
 
 # Python
 
-* Use Python 3 -- start it with `$ python3` on Ubuntu.
+* Use Python 3. Start it with `$ python3`.
 
 Basic things that are introduced:
 
@@ -26,11 +26,38 @@ They introduce some basic math functions:
 Other math:
 
 ```python
-from math import sqrt
+from math import sqrt, pi
 from operator import add, sub, mul
 sqrt(256)
 add(14, 28)
 sub(100, mul(7, add(8, 4)))
+pi * 71 / 223
 ```
+
+Multiple assignment:
+
+```python
+x, y, z = 1, 2, 3
+```
+
+Things to the right of the `=` are evaluated first, so this works for switching values:
+
+```python
+x, y = y, x
+```
+
+## Expression Trees
+
+Section 1.2.5
+
+## Pure vs. Non-Pure Functions
+
+Watch out:
+
+```python
+two = print(2)
+print(two) # >>> None
+```
+(`print` return None.)
 
 

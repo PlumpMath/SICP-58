@@ -10,6 +10,7 @@
 ;* No doubling down or splitting in this version
 
 (define (best-total card-hand)
+  ;; Return the best possible total that is <= 21
   )
 
 (define
