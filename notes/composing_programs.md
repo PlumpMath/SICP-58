@@ -48,7 +48,7 @@ x, y = y, x
 
 ## Expression Trees
 
-Section 1.2.5
+See the diagrams in section 1.2.5
 
 ## Pure vs. Non-Pure Functions
 
@@ -58,6 +58,27 @@ Watch out:
 two = print(2)
 print(two) # >>> None
 ```
-(`print` return None.)
+(`print` returns None.)
+
+## Defining Functions
+
+    def <name>(<formal parameters>):
+        return <return expression>
+
+Examples:
+
+```python
+def square(x):
+    return mul(x, x)
+
+def sum_squares(x, y):
+    return add(square(s), square(y))
+```
+
+Built-in functions don't have formal paramenter names. E.g., `mul(...)`.
+
+## Frames and Execution Model
+
+See section 1.3 and [the official docs](https://docs.python.org/3.3/reference/executionmodel.html).
 
 
