@@ -10,7 +10,7 @@ Basic things that are introduced:
 ```python
 from urllib.request import urlopen
 shakespeare = urlopen('http://composingprograms.com/shakespeare.txt')
-words = set(shakespear.read().decode().split())
+words = set(shakespeare.read().decode().split())
 
 # Create a `set` of words that can be reversed to create other words in the doc
 {w for w in words if len(w) == 6 and w[::-1] in words}
@@ -183,4 +183,34 @@ You can also run doctests like this:
 
     $ python3 -m doctest <python_source_file>
 
+## Higher Order Functions
 
+The book gives examples of similar functions that perform summation. It then shows a basic template:
+
+```python
+def <name>(n):
+    total, k = 0, 1
+    while k <= n:
+        total, k = total + <term>(k), k + 1
+    return total
+```
+
+Here's a full example of the code:
+
+```python
+def summation(n, term):
+    total, k = 0, 1
+    while k <= n:
+        total, k = total + term(k), k + 1
+    return total
+
+def cube(x):
+    return x * x * x
+
+def sum_cubes(n):
+    return summation(n, cube)
+
+result = sum_cubes(3)
+```
+
+    
