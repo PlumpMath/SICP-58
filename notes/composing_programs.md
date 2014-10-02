@@ -150,17 +150,17 @@ You can put tests in docstrings:
 
 ```python
 def sum_naturals(n):
-        """Return the sum of the first n natural numbers.
+    """Return the sum of the first n natural numbers.
 
-        >>> sum_naturals(10)
-        55
-        >>> sum_naturals(100)
-        5050
-        """
-        total, k = 0, 1
-        while k <= n:
-            total, k = total + k, k + 1
-        return total
+    >>> sum_naturals(10)
+    55
+    >>> sum_naturals(100)
+    5050
+    """
+    total, k = 0, 1
+    while k <= n:
+        total, k = total + k, k + 1
+    return total
 ```
 
 Then:
@@ -211,6 +211,12 @@ def sum_cubes(n):
     return summation(n, cube)
 
 result = sum_cubes(3)
+```
+
+Or call `summation()` directly:
+
+```python
+summation(10, square)
 ```
 
 You can also use an identity function to sum natural numbers:
