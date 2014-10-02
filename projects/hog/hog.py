@@ -28,8 +28,6 @@ def roll_dice(num_rolls, dice=six_sided):
         current_roll = six_sided()
         dice_roll_list.append(current_roll)
 
-    print(dice_roll_list)
-
     # Pig Out rule
     if 1 in dice_roll_list:
         dice_score = 1
