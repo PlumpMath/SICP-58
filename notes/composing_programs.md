@@ -231,14 +231,13 @@ def sum_naturals(n):
     return summation(n, identity)
 ```
 
-Another, less-clever way to write it that might clarify it:
+Another, less-clever way to write it that might clarify things:
 
 ```python
 def summation(n, fn):
     total = 0
     k = 1
 
-    # Set base case in `while` loop
     while k <= n:
         total = total + fn(k) # summation
         k = k + 1 # increment
