@@ -118,9 +118,6 @@ def play(strategy0, strategy1, goal=GOAL_SCORE):
             score_list[who], score_list[other(who)] = score_list[other(who)], score_list[who]
         who = other(who)
     return score_list[0], score_list[1] 
-        #scores = swine_swap(score_list[who], score_list[other(who)])
-    
-    #return scores
 
 def swine_swap(score, opponent_score):
     """Implements Swine Swap rule"""

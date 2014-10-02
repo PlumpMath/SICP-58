@@ -117,31 +117,31 @@ def underline(s):
 
 def check_for_updates(index, filenames, version):
     print('You are running version', version, 'of the autograder')
-    try:
-        remotes = {}
-        for file in filenames:
-            remotes[file] = urllib.request.urlopen(
-                    os.path.join(index, file)).read().decode('utf-8')
-    except urllib.error.URLError:
-        print("Couldn't check remote autograder")
-        return
-    remote_version = re.search("__version__ = '(.*)'",
-                               remotes[filenames[0]])
-    if remote_version and remote_version.group(1) != version:
-        print('Version', remote_version.group(1),
-              'is available with new tests.')
-        prompt = input('Do you want to automatically download these files? [y/n]: ')
-        if 'y' in prompt.lower():
-            for file in filenames:
-                with open(file, 'w') as new:
-                    new.write(remotes[file])
-                    print('\t', file, 'updated')
-            exit(0)
-        else:
-            print('You can download the new autograder from the following links:')
-            for file in filenames:
-                print('\t' + os.path.join(index, file))
-            print()
+    #try:
+        #remotes = {}
+        #for file in filenames:
+            #remotes[file] = urllib.request.urlopen(
+                    #os.path.join(index, file)).read().decode('utf-8')
+    #except urllib.error.URLError:
+        #print("Couldn't check remote autograder")
+        #return
+    #remote_version = re.search("__version__ = '(.*)'",
+                               #remotes[filenames[0]])
+    #if remote_version and remote_version.group(1) != version:
+        #print('Version', remote_version.group(1),
+              #'is available with new tests.')
+        #prompt = input('Do you want to automatically download these files? [y/n]: ')
+        #if 'y' in prompt.lower():
+            #for file in filenames:
+                #with open(file, 'w') as new:
+                    #new.write(remotes[file])
+                    #print('\t', file, 'updated')
+            #exit(0)
+        #else:
+            #print('You can download the new autograder from the following links:')
+            #for file in filenames:
+                #print('\t' + os.path.join(index, file))
+            #print()
 
 def run_tests(name, remote_index, autograder_files, version, **kwargs):
     parser = argparse.ArgumentParser(
