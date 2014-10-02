@@ -195,7 +195,7 @@ def <name>(n):
     return total
 ```
 
-Here's a full example of the code:
+Here's a full example:
 
 ```python
 def summation(n, term):
@@ -213,4 +213,28 @@ def sum_cubes(n):
 result = sum_cubes(3)
 ```
 
-    
+You can also use an identity function to sum natural numbers:
+
+```python
+def identity(x):
+    return x
+
+def sum_naturals(n):
+    return summation(n, identity)
+```
+
+Another, less-clever way to write it that might clarify it:
+
+```python
+def summation(n, fn):
+    total = 0
+    k = 1
+
+    # Set base case in while loop
+    while k <= n:
+        total = total + fn(k)
+        k = k + 1 # increment
+    return total
+```
+
+
