@@ -74,6 +74,7 @@ def select_dice(score, opponent_score):
     """
     "*** YOUR CODE HERE ***"
 
+    # Hog wild rule
     mod_7_check = (score + opponent_score) % 7
     if mod_7_check == 0:
         return four_sided
@@ -104,7 +105,31 @@ def play(strategy0, strategy1, goal=GOAL_SCORE):
     who = 0  # Which player is about to take a turn, 0 (first) or 1 (second)
     score, opponent_score = 0, 0
     "*** YOUR CODE HERE ***"
-    return score, opponent_score  # You may wish to change this line.
+
+    strategy_list = [strategy0, strategy1]
+    score_list = [score, opponent_score]
+
+    while score_list[who] < goal and score_list[other(who)] < goal:
+        dice = select_dice(score_list[who], score_list[other(who)])
+        num_rolls = strategy_list[who](score_list[who], score_list[other(who)])
+        last_roll = take_turn(num_rolls, score_list[other(who)], dice)
+        score_list[who] = score_list[who] + last_roll
+        if (score_list[who] == (2 * score_list[other(who)])) or (score_list[who] == ((1/2) * score_list[other(who)])):
+            score_list[who], score_list[other(who)] = score_list[other(who)], score_list[who]
+        who = other(who)
+    return score_list[0], score_list[1] 
+        #scores = swine_swap(score_list[who], score_list[other(who)])
+    
+    #return scores
+
+def swine_swap(score, opponent_score):
+    """Implements Swine Swap rule"""
+    bigger_score = max(score, opponent_score)
+    smaller_score = min(score, opponent_score)
+    if bigger_score == smaller_score * 2:
+        score, opponent_score = opponent_score, score
+
+    return [score, opponent_score]
 
 #######################
 # Phase 2: Strategies #
