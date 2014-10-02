@@ -134,3 +134,53 @@ def pressure(v, t, n=6.022e23):
     ...
 ```
 
+## Testing
+
+Use `assert`:
+
+```python
+assert fib(8) == 13, 'The 8th Fibonacci number should be 13'
+```
+
+### Doctests
+
+You can put tests in docstrings:
+
+```python
+def sum_naturals(n):
+        """Return the sum of the first n natural numbers.
+
+        >>> sum_naturals(10)
+        55
+        >>> sum_naturals(100)
+        5050
+        """
+        total, k = 0, 1
+        while k <= n:
+            total, k = total + k, k + 1
+        return total
+```
+
+Then:
+
+```python
+from doctest import testmod
+testmod()
+```
+
+You'll get back the test results.
+
+To test single function use `run_docstring_examples`:
+
+```python
+from doctest import run_docstring_examples
+run_docstring_examples(sum_naturals, globals(), True)
+```
+
+Replace `sum_naturals` with the name of the function to test.
+
+You can also run doctests like this:
+
+    $ python3 -m doctest <python_source_file>
+
+
