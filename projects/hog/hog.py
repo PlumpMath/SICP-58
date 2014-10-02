@@ -25,7 +25,7 @@ def roll_dice(num_rolls, dice=six_sided):
     
     dice_roll_list = []
     for roll in range(num_rolls):
-        current_roll = six_sided()
+        current_roll = dice()
         dice_roll_list.append(current_roll)
 
     # Pig Out rule
@@ -48,6 +48,16 @@ def take_turn(num_rolls, opponent_score, dice=six_sided):
     assert num_rolls <= 10, 'Cannot roll more than 10 dice.'
     assert opponent_score < 100, 'The game should be over.'
     "*** YOUR CODE HERE ***"
+
+    if num_rolls <= 0:
+        # Free bacon rule
+        str_score = str(opponent_score)
+        split_opponent_score = list(str_score)
+        number_of_points = int(max(split_opponent_score)) + 1
+    else:
+        number_of_points = roll_dice(num_rolls, dice)
+
+    return number_of_points
 
 # Playing a game
 
