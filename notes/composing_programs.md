@@ -1,6 +1,8 @@
 Composing Programs
 ==================
 
+Notes from [ComposingPrograms.com](http://composingprograms.com/).
+
 # Python
 
 * Use Python 3. Start it with `$ python3`.
