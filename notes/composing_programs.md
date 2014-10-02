@@ -187,13 +187,11 @@ You can also run doctests like this:
 
 The book gives examples of similar functions that perform summation. It then shows a basic template:
 
-```python
-def <name>(n):
-    total, k = 0, 1
-    while k <= n:
-        total, k = total + <term>(k), k + 1
-    return total
-```
+    def <name>(n):
+        total, k = 0, 1
+        while k <= n:
+            total, k = total + <term>(k), k + 1
+        return total
 
 Here's a full example:
 
