@@ -64,6 +64,16 @@ print(two) # >>> None
 ```
 (`print` returns None.)
 
+```python
+# Pure
+def square(x):
+    return mul(x, x)
+
+# Not pure
+def print_square(x):
+    print(square(x)) # Side effects, returns None
+```
+
 ## Defining Functions
 
     def <name>(<formal parameters>):
@@ -123,20 +133,4 @@ Example:
 def pressure(v, t, n=6.022e23):
     pass
 ```
-
-# Purity
-
-```python
-# Pure
-def square(x):
-    return mul(x, x)
-
-# Not pure
-def print_square(x):
-    print(square(x))
-```
-
-
-
-
 
