@@ -71,7 +71,7 @@ def square(x):
 
 # Not pure
 def print_square(x):
-    print(square(x)) # Side effects, returns None
+    print(square(x)) # Side effects, `print` returns None
 ```
 
 ## Defining Functions
@@ -131,6 +131,6 @@ Example:
 
 ```python
 def pressure(v, t, n=6.022e23):
-    pass
+    ...
 ```
 
