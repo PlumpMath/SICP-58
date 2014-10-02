@@ -14,6 +14,8 @@ words = set(shakespeare.read().decode().split())
 
 # Create a `set` of words that can be reversed to create other words in the doc
 {w for w in words if len(w) == 6 and w[::-1] in words}
+
+# {'reward', 'repaid', 'redder', 'diaper', 'drawer'}
 ```
 
 They introduce some basic math functions:
@@ -228,9 +230,9 @@ def summation(n, fn):
     total = 0
     k = 1
 
-    # Set base case in while loop
+    # Set base case in `while` loop
     while k <= n:
-        total = total + fn(k)
+        total = total + fn(k) # summation
         k = k + 1 # increment
     return total
 ```
