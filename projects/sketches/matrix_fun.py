@@ -1,16 +1,17 @@
 def create_output_matrix(matrix):
-    """Takes a matrix and returns an empty matrix of the same dimensions.
+    """Takes a matrix and returns an empty matrix template of the same dimensions.
     
-    It will be empty: [[None, None, None],[None, None, None],[None, None, None]]
+    It will be filled with placeholders: [[None, None, None], [None, None, None], [None, None, None]]
     """
 
+    # TODO: refactor with the other function below
     rows = len(matrix)
     cols = len(matrix[0])
 
     return [[None] * cols for row in range(rows)]
 
 def get_mirrored_point(n, length):
-    """Takes a number and a length and returns the mirrored point.
+    """Takes a number from a list like [0, 1, 2] and a length and returns the mirrored point.
     
     If you have a sequence like [0, 1, 2], you could pass each number in here, along with a length
     and get back its mirrored counterpart:
@@ -26,7 +27,8 @@ def get_mirrored_point(n, length):
     0
     """
 
-    return length - n
+    # TODO: The list must at zero. This needs to be fixed.
+    return length - n - 1
 
 def get_matrix_dimensions(matrix):
     """Returns the number of rows and colums in a matrix."""
@@ -47,20 +49,25 @@ def do_it(matrix):
     for idx_i, i in enumerate(matrix):
 
         for j in range(num_rows):
-            point = get_mirrored_point(idx_i, num_rows) - 1
+            point = get_mirrored_point(idx_i, num_rows)
 
-            #print("A[i][j] is", i[j])
-            #print("B[j][point] is", j, point)
-            B[j][point] = i[j]
+            print("i[j]", i[j], "is being assigned to output_matrix", j, point)
+            output_matrix[j][point] = i[j]
 
-            #print("point", point)
-            #print("j", j)
-            #print("i", i)
-            #B[j][point] = i[j]
+    print(output_matrix)
+    return output_matrix
 
-    print(B)
-
+# Sample matrix
 A = [[1,2,3],
      [4,5,6],
      [7,8,9]]
 
+# do it
+do_it(A)
+
+B = [[1,2,3,4],
+     [5,6,7,8],
+     [9,10,11,12],
+     [13,14,15,16]]
+
+do_it(B)
